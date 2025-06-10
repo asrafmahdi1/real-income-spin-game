@@ -1,27 +1,32 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>রিয়েল ইনকাম স্পিন গেম</title>
-<link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Spin to Win</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>🎉 রিয়েল ইনকাম স্পিন গেম 🎉</h1>
 
-<div class="wheel-container">
-  <canvas id="wheel" width="400" height="400"></canvas>
-  <div class="arrow"></div>
-  <button id="spinButton">SPIN</button>
-</div>
+  <h1>🎁 Spin & Earn</h1>
+  <div class="balance">Your Balance: ৳<span id="balance-amount">0</span></div>
+  <div id="spin-result">Tap to spin!</div>
 
-<div id="result"></div>
-<div id="balance">আপনার ব্যালেন্স: <span id="wallet">0</span> টাকা</div>
-<button id="withdrawButton" style="display:none;">💸 টাকা উত্তোলন করুন</button>
+  <div class="wheel-area">
+    <button onclick="spin()">🎡 Spin Now</button>
+    <button onclick="showWithdrawModal()">💰 Withdraw</button>
+  </div>
 
-<h2>🔥 ইউজার রিভিউ 🔥</h2>
-<div id="reviews"></div>
+  <!-- Withdraw Modal -->
+  <div id="withdrawModal">
+    <div class="modal-content">
+      <h2>Withdraw Instructions</h2>
+      <p>✅ আপনার ব্যালেন্স উত্তোলনের জন্য <b>৳150</b> ডিপোজিট করা বাধ্যতামূলক।</p>
+      <p>📲 ডিপোজিট করার পরে স্ক্রিনশটসহ Telegram সাপোর্টে যোগাযোগ করুন।</p>
+      <a href="https://t.me/asraf_mahdi" target="_blank">Contact Telegram Support</a><br>
+      <button onclick="closeWithdrawModal()">Close</button>
+    </div>
+  </div>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
